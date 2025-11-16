@@ -31,12 +31,11 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    font-size: 22px;
+    font-style: normal; 
+    font-size: 16px; 
     color: var(--header-text);
-    font-style: italic;
-    position: relative; /* Para posicionamento absoluto da nav em mobile */
+    position: relative;
 }
-
 header nav a {
     margin-left: 30px; 
     text-decoration: none;
@@ -70,14 +69,25 @@ header nav a:hover::after {
     left: 0;
 }
 
+.header-content-left {
+    display: flex;
+    align-items: center; /* Alinha verticalmente a logo e o texto */
+    gap: 15px; /* Espaço entre a logo e o nome LATIUS */
+}
+
+.header-title {
+    font-size: 36px; /* Ajuste o tamanho do nome LATIUS */
+    font-weight: bold;
+    color: var(--header-text); /* Cor do texto do cabeçalho */
+    font-style: italic; /* Mantém o estilo anterior */
+    letter-spacing: 1px;
+}
+
 .image_logo {
     width: 80px;
 }
 
 /* Oculta a classe .home rígida - use a navegação flexível */
-.home {
-    /* display: none; */ 
-}
 
 /* === HERO SECTION - Corrigindo o alinhamento no Mobile === */
 .hero {
@@ -145,14 +155,14 @@ header nav a:hover::after {
 /* === CATEGORIAS === */
 .categories {
     background: var(--card-bg);
-    padding: 80px 0;
+    padding: 40px 0;
     text-align: center;
-    border-bottom: 5px solid var(--accent-color);
+    border-bottom: 1px solid #c3c3c3
 }
 
 .categories h2 {
-    font-size: 36px;
-    margin-bottom: 60px;
+    font-size: 30px;
+    margin-bottom: 40px;
     color: var(--secondary-color);
 }
 
@@ -176,8 +186,8 @@ header nav a:hover::after {
 }
 
 .cat-item img {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
     border-radius: 50%;
     background: #fff;
@@ -334,9 +344,8 @@ header nav a:hover::after {
 
 .texto-sobre h2 {
     font-size: 34px;
-    color: var(--primary-color);
     margin-bottom: 25px;
-    border-left: 5px solid var(--accent-color);
+    border-left: 5px solid var(--primary-color);
     padding-left: 15px;
     letter-spacing: 0.5px;
 }
