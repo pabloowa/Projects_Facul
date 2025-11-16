@@ -380,3 +380,57 @@ header nav a:hover::after { /* HOVER: A linha se expande do centro */
         padding-left: 40px;
     }
 }
+
+/* 💻 Desktop Grande (Acima de 1400px, talvez você queira mais espaçamento) */
+@media (min-width: 1400px) {
+    .products, .sobre {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+}
+
+/* 🖥️ Desktop Médio/Laptop (Ponto de interrupção para 3 colunas) */
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr); /* Volta para 3 colunas */
+    }
+    .categories, .products, .sobre {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+/* 📱 Tablet (Ponto de interrupção para 2 colunas e layout da seção 'Sobre') */
+@media (max-width: 800px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Volta para 2 colunas */
+    }
+    
+    .sobre {
+        /* Muda de linha para coluna, empilhando o conteúdo */
+        flex-direction: column; 
+        gap: 30px;
+        padding: 40px 40px;
+    }
+    
+    .texto-sobre, .image-sobre {
+        width: 100%; /* Fazem com que o texto e a imagem ocupem a largura total */
+    }
+}
+
+/* 📲 Celular (Apenas 1 coluna) */
+@media (max-width: 500px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* Apenas 1 coluna */
+    }
+    header {
+        /* Header menor e esconde a navegação no celular (para simplificar) */
+        padding: 10px 20px;
+    }
+    header nav {
+        display: none; /* Esconder navegação para menus móveis (necessitaria de JS ou CSS 'Hamburger') */
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+}
