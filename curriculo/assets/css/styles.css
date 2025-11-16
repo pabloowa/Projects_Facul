@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "trebuchet";
+  src: url("../../public/trebuchet.ttf") format("truetype");
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "volkov";
+  src: url("../../public/volkov.ttf") format("truetype");
+  font-display: fallback;
+}
+
+.container__nome {
+  color: #B210FE;
+  font-family: "trebuchet";
+  font-size: 8.75rem;
+  font-weight: 400;
+}
+.cabecalho__container div {
+  display: flex;
+  
+}

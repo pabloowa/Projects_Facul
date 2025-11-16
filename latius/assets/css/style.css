@@ -1,0 +1,382 @@
+/* === AJUSTES INICIAIS E VARIÁVEIS === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Mantendo as fontes originais */
+    font-family: Arial, sans-serif; 
+}
+
+:root {
+    --primary-color: #ff9d2c; /* Laranja de destaque */
+    --secondary-color: #181818; /* Preto do Header */
+    --accent-color: #4e65c1; /* Azul moderno para detalhes */
+    --light-bg: #f5f5f5; 
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --header-text: #f0e0e0;
+}
+
+body {
+    background: var(--light-bg);
+    color: var(--text-color);
+    min-height: 100vh; /* Garante que o body ocupe toda a altura */
+}
+
+/* === HEADER & NAVIGATION === */
+header {
+    background: var(--secondary-color);
+    padding: 15px 50px; /* Mais padding vertical */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra mais destacada */
+    font-size: 22px;
+    color: var(--header-text);
+    font-style: italic;
+}
+
+header nav a {
+    margin-left: 30px; 
+    text-decoration: none;
+    color: var(--header-text);
+    font-weight: 600; /* Levemente mais ousado */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 19px; /* Levemente menor para caber mais */
+    font-style: normal;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav a::after { /* Novo: Linha inferior animada */
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: var(--primary-color);
+    left: 50%;
+    bottom: -8px;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+header nav a:hover { 
+    color: var(--primary-color); 
+    transform: translateY(-2px); 
+}
+
+header nav a:hover::after { /* HOVER: A linha se expande do centro */
+    width: 100%;
+    left: 0;
+}
+
+.home{
+    padding-left: 500px;    
+}
+
+.image_logo {
+    width: 80px; /* Ajustado */
+}
+
+/* === HERO SECTION - Com mais polimento === */
+.hero {
+    width: 100%;
+    height: 75vh; /* Ligeiramente mais alto */
+    background-image: url("../css/imagem_cabecalho.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    color: white;
+    position: relative;
+}
+
+.hero::before { /* Overlay mais escuro */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    animation: fadeInDown 1s ease-out; /* Animação de entrada sutil (Apenas CSS) */
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content h1 {
+    font-size: 56px; /* Maior */
+    font-weight: 800;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Botão Principal - Mais detalhes */
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    background: var(--primary-color);
+    padding: 14px 32px;
+    border-radius: 50px; /* Formato de pílula */
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 15px rgba(255, 157, 44, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #e68e27; 
+    transform: translateY(-4px) scale(1.02); /* Sobe mais */
+    box-shadow: 0 10px 20px rgba(255, 157, 44, 0.6);
+}
+
+/* === CATEGORIAS - ESTILIZAÇÃO A MAIS === */
+.categories {
+    background: var(--card-bg);
+    padding: 35px 0; /* Mais espaço */
+    text-align: center;
+    border-bottom: 5px solid var(); /* Borda de cor moderna */
+}
+
+.categories h2 {
+    font-size: 25px;
+    margin-bottom: 40px; /* Mais espaço */
+    color: var(--secondary-color);
+}
+
+.cat-list {
+    display: flex;
+    justify-content: center;
+    gap: 150px; /* Mais espaçamento */
+}
+
+.cat-item {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease; /* TRANSITION: Efeito 'spring' */
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.cat-item:hover {
+    transform: scale(1.1); /* HOVER: Aumento mais significativo */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* HOVER: Sombra para flutuação */
+}
+
+.cat-item img {
+    width: 120px; /* Maior */
+    height: 120px; 
+    object-fit: contain; 
+    border-radius: 50%; /* Imagens circulares */
+    background: #fff;
+    padding: 10px;
+    border: 3px solid var(--primary-color); /* Borda primária */
+    transition: border-color 0.4s ease;
+}
+
+.cat-item:hover img {
+    border-color: var(--accent-color); /* HOVER: Mudança de cor da borda */
+}
+
+.cat-item p {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+/* === PRODUTOS - GRID AJUSTADO PARA 4 COLUNAS === */
+.products {
+    padding: 60px 80px; /* Ajuste o padding para centralizar */
+    background: var(--light-bg);
+}
+
+.products h2 {
+    font-size: 32px;
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 20px; /* Alinhando com o grid */
+}
+
+.product-grid {
+    display: grid;
+    /* AJUSTE ESSENCIAL: Garante 4 colunas fixas e responsivas */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 25px; 
+    /* Adicionando media query no final para responsividade */
+}
+
+.product-card {
+    background: var(--card-bg); 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); 
+    border: 1px solid #f0f0f0; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
+}
+
+.product-card:hover {
+    transform: translateY(-6px); 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18); 
+    border-color: var(--accent-color); /* Nova cor na borda */
+}
+
+.product-card > img {
+    width: 100%; /* Ajuste ocupe a largura do card */
+    max-width: 150px; /* Máximo de 150px */
+    height: 180px; 
+    object-fit: contain; 
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1)); /* Sombra na imagem */
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Botão 'Comprar Agora' e Carrinho */
+.buy-row {
+    display: flex;
+    justify-content: space-between; /* Espaçamento entre botão e ícone */
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.add-btn {
+    background: var(--primary-color);
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    flex-grow: 1; 
+    box-shadow: 0 3px 8px rgba(255, 157, 44, 0.3);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.add-btn:hover {
+    background: var(--accent-color); /* HOVER: Muda para a cor de acento */
+    transform: scale(1.02);
+}
+
+.cart-icon {
+    width: 35px;
+    height: 35px;
+    background: var(--card-bg);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 5px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.cart-icon:hover {
+    border-color: var(--accent-color);
+    transform: rotate(10deg) scale(1.1); /* HOVER: Efeito de rotação e aumento */
+}
+
+/* === SOBRE NÓS - Com Imagem na Direita === */
+.sobre {
+    display: flex;
+    /* Inverte a ordem dos itens */
+    flex-direction: row-reverse; 
+    justify-content: space-between;
+    padding: 80px 100px;
+    background: var(--card-bg);
+    align-items: center;
+    gap: 60px;
+    border-top: 1px solid #ddd;
+}
+
+.image-sobre {
+    /* Define a largura para a área da imagem */
+    width: 40%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease;
+}
+
+.image-sobre:hover {
+    transform: scale(1.02);
+}
+
+.image-sobre img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.texto-sobre {
+    /* Define a largura para a área do texto */
+    width: 55%;
+    text-align: left;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.texto-sobre h2 {
+    font-size: 34px;
+    margin-bottom: 25px;
+    border-left: 5px solid var(--primary-color);
+    padding-left: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* === RODAPÉ - Estilização Final === */
+.rodape {
+    background: #111;
+    color: #9a9898;
+    padding: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-top: 5px solid var(--primary-color);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
+}
+
+/* === MEDIA QUERIES (PARA GARANTIR 4 COLUNAS EM TELAS MAIORES) === */
+/* Se a tela for menor que 1200px, ele volta para 3 colunas */
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .categories, .products, .sobre {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+/* Se a tela for menor que 800px, ele volta para 2 colunas */
+@media (max-width: 800px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cat-list {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .hero {
+        padding-left: 40px;
+    }
+}
