@@ -103,28 +103,23 @@ header .cabecalho__imagem {
   margin: -10px auto 0 auto;
   background-color: black;
 }
-
+ 
 .sumario::before {
   content: "";
   position: absolute;
   inset: 0;
   background:
     radial-gradient(white 1.3px, transparent 1px) 0 0,
-    radial-gradient(white 1.3px, transparent 1px) 50px 50px;
+    radial-gradient(white 1.3px, transparent 1.5px) 50px 50px;
   background-size: 100px 100px;
   opacity: .25;
-  animation: sumarioStars 60s linear infinite;
   pointer-events: none;
-  mix-blend-mode: screen; /* opcional, deixa as estrelas se misturarem melhor */
-}
-
-@keyframes sumarioStars {
-  from { transform: translateY(0); }
-  to   { transform: translateY(-600px); }
+  mix-blend-mode: screen; 
 }
 
 .sumario__conteudo {
   max-width: 650px;
+  margin-top: -50px;
 }
 
 .sumario__titulo {
@@ -134,8 +129,8 @@ header .cabecalho__imagem {
   margin-bottom: 32px;
   text-align: left;
   position: relative;
-  left: -450px;
-  bottom: -130px;
+  left: -434px;
+  bottom: -134px;
   letter-spacing: 6px;
  -webkit-text-stroke: 1.5px #f796e6f9; 
 }
@@ -169,7 +164,7 @@ header .cabecalho__imagem {
 .manopla {
   width: 500px;
   height: auto;
-  margin-bottom: -202px;
+  margin-bottom: -220px;
   margin-left: -50px;
 }
 
