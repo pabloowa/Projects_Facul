@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanos - Portfolio</title>
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <meta name="description" content="Portfólio para o personagem Thanos como funcionário da rede atacadista Atakarejo.">
+</head>
+
+<body>
+   <!-- CABEÇALHO/HERO  -->
+  <header class="cabecalho">
+    <div class="cabecalho__container">
+      <!-- Nome e título -->
+      <div>
+        <h1 class="container__nome">THANOS</h1>
+        <h3 class="container__sobrenome">de Titã</h3>
+      </div>
+      <!-- Descrição -->
+      <p class="container__descricao">
+        “Há mais de décadas utilizando das minhas capacidades para adquirir cada vez mais conhecimentos e descobrir novas formas de aplicá-los pelo universo a fim de tornar a vida mais equilibrada.”
+      </p>
+    </div>
+    <!-- THANOS -->
+    <img class="cabecalho__imagem" src="./public/Thanos.png" alt="Thanos" style="z-index: -1;">
+  </header>
+  <!-- Borda -->
+  <img src="./public/borda1.svg" style="width: 100%; margin-top: -6.4rem;" alt="borda1">
+
+  <!-- SECTION SUMÁRIO -->
+  <section class="sumario">
+
+    <!-- Imagem da manopla com mapa de cliques -->
+    <div class="sumario__imagem">
+      <img src="./public/Manopla.png" usemap="#mapaManopla" alt="Manopla do infinito" class="manopla">
+
+      <!-- Mapeamento das pedras-->
+      <map name="mapaManopla">
+        <area shape="rect" coords="214,173,245,208" href="#hardskills">
+        <area shape="rect" coords="153,263,199,315" href="#softskills">
+        <area shape="rect" coords="136,211,152,245" href="#realidade">
+        <area shape="rect" coords="112,230,131,260" href="#alma">
+        <area shape="rect" coords="329,262,360,302" href="#tempo">
+        <area shape="rect" coords="169,191,196,227" href="#espaco">
+      </map>
+    </div>
+
+    <!-- Texto do sumário -->
+    <div class="sumario__conteudo">
+
+      <h2 class="sumario__titulo">SUMÁRIO</h2>
+      <h3 class="sumario__subtitulo">SOBRE MIM</h3>
+
+      <p class="sumario__texto">
+        Sou um profissional determinado e estratégico, com anos de experiência equilibrando grandes desafios — literalmente.
+        Tenho como missão aplicar minhas habilidades de liderança, foco e tomada de decisão para alcançar resultados que
+        tragam equilíbrio e eficiência a qualquer equipe.
+      </p>
+
+      <p class="sumario__texto">
+        Na rede Atakarejo, atuei com disciplina e propósito, garantindo que cada meta seja cumprida com perfeição e que cada
+        processo esteja em harmonia. Valorizo o trabalho em equipe, a organização e o comprometimento com o sucesso coletivo.
+      </p>
+
+      <p class="sumario__texto destaque">
+        Costumo dizer que <b>“trabalhar com equilíbrio é inevitável”.</b>
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN SECTION-->
+  <main class="principal">
+    <h1 class="principal__titulo">Informações</h1>
+    <article class="principal__informacoes">
+
+      <!-- Hard Skills -->
+      <section class="informacoes__hardskills">
+        <img src="./public/joia_poder.svg" alt="Pedra">
+        <div>
+          <h2 class="hardskills__titulo">HARD SKILLS (PODER)</h2>
+
+          <ul id="hardskills" class="hardskills__lista">
+            <li>Expertise na criação de estratégias para alcançar meus objetivos;</li>
+            <li>Determinação extrema;</li>
+            <li>Força acima da média;</li>
+            <li>Uma linda pele roxa.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Soft Skills -->
+      <section class="informacoes__softskills">
+        <img src="./public/joia_mente.svg" alt="Pedra">
+
+        <div>
+          <h2 class="softskills__titulo">SOFT SKILLS (MENTE)</h2>
+
+          <ul id="softskills" class="softskills__lista">
+            <li>Inteligência tática universal;</li>
+            <li>Capacidade de liderança em grandes exércitos;</li>
+            <li>Resistência mental a forças externas;</li>
+            <li>Visão estratégica de longo prazo.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Experiência -->
+      <section class="informacoes__experiencia">
+        <img src="./public/joia_realidade.svg" alt="Pedra">
+
+        <div>
+          <h2 id="realidade" class="experiencia__titulo">WORK EXPERIENCE (REALIDADE)</h2>
+
+          <ul class="experiencia__lista">
+            <li>Exterminador de pragas (1 ano)</li>
+            <li>Repositor (1 ano)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Formação -->
+      <section class="informacoes__formacaoacademica">
+        <img src="./public/joia_alma.svg" alt="Pedra">
+
+        <div>
+          <h2 class="formacaoacademica__titulo">FORMAÇÃO ACADÊMICA (ALMA)</h2>
+
+          <p id="alma">
+            Não possuo formação acadêmica formal. Estudo de forma autodidata sobre diversos assuntos, com
+            destaque em combate corpo a corpo e manipulação genética.
+          </p>
+        </div>
+      </section>
+
+      <!-- Objetivo profissional -->
+      <section class="informacoes__objeticoprofissional">
+        <img src="./public/joia_tempo.svg" alt="Pedra">
+
+        <div>
+          <h2 class="objeticoprofissional__titulo">OBJETIVO PROFISSIONAL (TEMPO)</h2>
+
+          <ul id="tempo" class="objeticoprofissional__lista">
+            <li>Buscar equilíbrio universal;</li>
+            <li>Garantir a sobrevivência das futuras gerações;</li>
+            <li>Reduzir o sofrimento decorrente da escassez;</li>
+            <li>Manter a ordem cósmica.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section class="informacoes__contato">
+        <img src="./public/joia_espaco.svg" alt="Pedra">
+
+        <div>
+          <h2 class="contato__titulo">CONTATO (ESPAÇO)</h2>
+          <p id="espaco" class="contato__paragrafo">
+            Atualmente se encontra morto e não possui formas de contato desde que a joia da alma foi destruída.
+            <br>
+            <p style="padding-top: 20px; font-weight: bold; color: rgb(66, 4, 4); padding-left: 385px;",>- F THANOS</p>
+          </p>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- Borda decorativa -->
+  <img src="./public/borda2.svg" style="width: 100%; filter: brightness(0.62);" alt="borda2">
+
+  <!-- FOOTER -->
+  <footer class="rodape">
+    <p class="rodape__texto">“Minha Contratação é inevitável.”</p>
+  </footer>
+
+</body>
+</html>
